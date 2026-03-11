@@ -1,0 +1,77 @@
+html {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    text-align: center;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    transition-duration: 0.1s;
+    padding: 1.5em;
+    border: black 2px solid;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(71, 71, 71);
+}
+
+button:hover {
+    transition-duration: 0.1s;
+    background-color: rgb(46, 46, 46);
+}
+
+a {
+    color: rgb(187, 138, 246);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@keyframes container-contract {
+    from { opacity: 1.0 }
+    to { opacity: 0.0; pointer-events: none; }
+}
+
+.container-contract-animation {
+    animation: container-contract 0.2s linear;
+    animation-fill-mode: forwards;
+}
+
+
+.text-wrapper {
+    width: 80%;
+}
+
+
+@keyframes show-line {
+    from {opacity: 0.0}
+    to {opacity: 1.0}
+}
+
+.show-line-animation {
+    animation: show-line 0.2s linear;
+    animation-fill-mode: forwards;
+}
+
+
+.hidden {
+    color: rgb(20, 20, 20);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
